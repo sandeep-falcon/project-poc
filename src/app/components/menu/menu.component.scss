@@ -1,0 +1,13 @@
+mat-list-item[matRipple] {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: #ccc;
+    }
+
+    // span,
+    // mat-icon {
+    //     color: #d1cdc7;
+    // }
+}
