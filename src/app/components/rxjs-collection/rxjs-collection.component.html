@@ -1,1 +1,13 @@
-<p>rxjs-collection works!</p>
+<div class="container">
+    <div class="row">
+        @for(item of rxJsCollection; track item.label){
+        <div class="col-md-6 mb-3">
+            <div class="card" matRipple [routerLink]="item.route">
+                <div class="card-body text-center text-capitalize">
+                    <h5>{{item.label}}</h5>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
