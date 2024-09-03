@@ -13,7 +13,20 @@ import { Location } from '@angular/common';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(private _location: Location) { }
+  screenWidth!: number;
+
+  constructor(private _location: Location) {
+    this.calculateWidthOnScreenResize();
+  }
+ // Function to calculate the screen width on page load and on screen size change
+  calculateWidthOnScreenResize() {
+    // set screenWidth on page load
+    this.screenWidth = window.innerWidth;
+    window.onresize = () => {
+      // set screenWidth on screen size change
+      this.screenWidth = window.innerWidth;
+    };
+  }
 
   goToBack() {
     this._location.back();

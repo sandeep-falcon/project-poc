@@ -1,6 +1,6 @@
 <app-header [drawer]="drawer"></app-header>
 <mat-drawer-container class="sidenav-container" autosize>
-    <mat-drawer #drawer class="sidenav-drawer" mode="side" [opened]="true">
+    <mat-drawer #drawer class="sidenav-drawer" [opened]="screenWidth > 840" [mode]="screenWidth > 840 ? 'side' : 'over'">
         <app-menu></app-menu>
     </mat-drawer>
     <mat-toolbar-row>
