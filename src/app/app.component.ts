@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,10 @@ import { MenuComponent } from './components/menu/menu.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(private _location: Location) { }
+
+  goToBack() {
+    this._location.back();
+  }
+}

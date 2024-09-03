@@ -3,6 +3,13 @@
     <mat-drawer #drawer class="sidenav-drawer" mode="side" [opened]="true">
         <app-menu></app-menu>
     </mat-drawer>
+    <mat-toolbar-row>
+        <h5 class="m-0">RxJs Collection</h5>
+        <span class="spacer"></span>
+        <button mat-button class="text-dark" (click)="goToBack()">
+            Back <mat-icon>arrow_back</mat-icon>
+        </button>
+    </mat-toolbar-row>
     <main class="container-fluid p-4">
         <router-outlet></router-outlet>
     </main>
