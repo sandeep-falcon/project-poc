@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="">
+            <h3>Combine Latest</h3>
+            <p>This operator combines the latest values from multiple observables into a single observable. It emits an
+                array of the latest values whenever any of the source observables emit a new value.</p>
+            <button mat-raised-button (click)="getCombineLatest()">start</button>
+        </div>
+        <ul>
+            @for(item of combineLatestData; track $index){
+            <li>{{item}}</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-md-6">
+        <div class="">
+            <h3>Fork Join</h3>
+            <p>This operator takes an array of observables and waits for all the source observables to complete. Once
+                they all complete, it emits an array of the last emitted values from each observable.</p>
+            <button mat-raised-button (click)="getForkJoin()">start</button>
+        </div>
+        <ul>
+            @for(item of forkJoinData; track $index){
+            <li>{{item}}</li>
+            }
+        </ul>
+    </div>
+</div>
