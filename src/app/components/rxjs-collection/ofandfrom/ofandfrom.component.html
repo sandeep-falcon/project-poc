@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6">
+        <p>OF</p>
+        <button (click)="getDataWithOF()">Start OF</button>
+
+        @for(item of dataOF; track $index){
+        {{item}}
+        }
+    </div>
+
+    <div class="col-md-6">
+        <p>From</p>
+        <button (click)="getDataWithFrom()">Start FROM</button>
+
+        @for(item of dataFROM; track $index){
+        {{item}}
+        }
+    </div>
+</div>
