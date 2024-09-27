@@ -17,5 +17,10 @@ export class MenuComponent {
       icon: 'home',
       route: '/rxjs',
     },
+    {
+      label: 'angular collection',
+      icon: 'home',
+      route: '/angular',
+    },
   ];
 }

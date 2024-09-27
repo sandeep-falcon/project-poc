@@ -2,7 +2,7 @@
     @for(item of list; track item.label){
     <mat-list-item matRipple [routerLink]="item.route">
         <div class="d-flex">
-            <span>{{item.label}}</span>
+            <span class="text-capitalize">{{item.label}}</span>
             <span class="spacer"></span>
             <mat-icon>{{item.icon}}</mat-icon>
         </div>
