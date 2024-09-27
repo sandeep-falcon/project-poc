@@ -1,0 +1,37 @@
+<!-- <div class="container d-flex justify-content-center align-items-center">
+    <div>
+        <button (click)="0" class="btn btn-primary">-</button>
+        <span class="p-3">{{ counter }}</span>
+        <button (click)="increment()" class="btn btn-primary">+</button>
+    </div>
+    <div>
+        <div class="task-item" *ngFor="let msg of message">
+            <p> {{ msg }}</p>
+        </div>
+    </div>
+</div> -->
+
+<!-- Implementing signals version -->
+
+<div class="container p-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-center align-items-center">
+                <button mat-raised-button (click)="decrement()">-</button>
+                <span class="p-3">{{ counterValue() }}</span>
+                <button mat-raised-button (click)="increment()">+</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <p class="text-center">Double Counter: {{doubleCounterValue()}}</p> <br>
+            <div class="d-flex justify-content-center align-items-center">
+                <p>messages</p>
+                <ul>
+                    @for(msg of message(); track $index){
+                    <p> {{ msg }}</p>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
