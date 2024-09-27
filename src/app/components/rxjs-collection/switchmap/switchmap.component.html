@@ -1,0 +1,19 @@
+<!-- <input [formControl]="searchControl" placeholder="Type to search" /> -->
+<!-- <ul>
+    @for(item of data$ | async; track $index ){
+    <li>{{ item }}</li>
+    }
+</ul> -->
+
+<h3>Switch Map</h3>
+<p>This operator is used to map each source value to an inner observable, and it only emits the values from the most
+    recent inner observable. If a new source value arrives before the previous inner observable completes, it will
+    switch to the new inner observable and unsubscribe from the previous one.</p>
+<button mat-raised-button (click)="getData()">
+    start
+</button>
+<ul>
+    @for(item of data; track $index ){
+    <li>{{ item }}</li>
+    }
+</ul>
