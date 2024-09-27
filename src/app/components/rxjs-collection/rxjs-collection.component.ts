@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { RouterLink } from '@angular/router';
-import { RxjsCollectionInterface } from '../../interface/rxjs-collection-interface';
+import { CollectionInterface } from '../../interface/collection-interface';
 
 @Component({
   selector: 'app-rxjs-collection',
@@ -11,7 +11,7 @@ import { RxjsCollectionInterface } from '../../interface/rxjs-collection-interfa
   styleUrl: './rxjs-collection.component.scss',
 })
 export class RxjsCollectionComponent {
-  rxJsCollection: RxjsCollectionInterface[] = [
+  rxJsCollection: CollectionInterface[] = [
     // {
     //   label: 'Observables',
     //   route: '/observables',
@@ -23,6 +23,10 @@ export class RxjsCollectionComponent {
     {
       label: 'CombineLatest and forkJoin',
       route: '/clfj',
+    },
+    {
+      label: 'Switch Map',
+      route: '/switchmap',
     },
   ];
 }
