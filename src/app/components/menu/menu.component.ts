@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../material/material.module';
 import { MenuListInterface } from '../../interface/menu-list-interface';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MaterialModule, RouterLink],
+  imports: [MaterialModule, RouterLink, RouterLinkActive],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })

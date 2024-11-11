@@ -1,6 +1,6 @@
 <mat-list>
     @for(item of list; track item.label){
-    <mat-list-item matRipple [routerLink]="item.route">
+    <mat-list-item matRipple [routerLink]="item.route" routerLinkActive="activeRoute">
         <div class="d-flex">
             <span class="text-capitalize">{{item.label}}</span>
             <span class="spacer"></span>
