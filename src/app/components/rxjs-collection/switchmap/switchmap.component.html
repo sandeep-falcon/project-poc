@@ -1,19 +1,16 @@
-<!-- <input [formControl]="searchControl" placeholder="Type to search" /> -->
-<!-- <ul>
-    @for(item of data$ | async; track $index ){
-    <li>{{ item }}</li>
-    }
-</ul> -->
-
 <h3>Switch Map</h3>
 <p>This operator is used to map each source value to an inner observable, and it only emits the values from the most
     recent inner observable. If a new source value arrives before the previous inner observable completes, it will
     switch to the new inner observable and unsubscribe from the previous one.</p>
-<button mat-raised-button (click)="getData()">
-    start
-</button>
+<div class="">
+    <h3>When to Use</h3>
+    <p>You have a stream that can emit multiple values, and only the most recent result should be used.
+        or You want to cancel previous requests or tasks in favor of the latest one.
+    </p>
+</div>
+<button mat-raised-button (click)="getData()">start</button>
 <ul>
-    @for(item of data; track $index ){
+    @for(item of switchMapData(); track $index ){
     <li>{{ item }}</li>
     }
 </ul>
