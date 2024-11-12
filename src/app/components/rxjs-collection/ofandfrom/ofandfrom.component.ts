@@ -2,15 +2,17 @@ import { Component, signal } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { MaterialModule } from '../../../material/material.module';
 import { Subscription } from 'rxjs';
+import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
   selector: 'app-ofandfrom',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './ofandfrom.component.html',
   styleUrl: './ofandfrom.component.scss',
 })
 export class OfandfromComponent {
+  title: string = 'Of and From';
   constructor(private dataService: DataService) {}
 
   dataOF = signal<number[]>([]);

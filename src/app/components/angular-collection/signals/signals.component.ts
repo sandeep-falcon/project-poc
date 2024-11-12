@@ -1,14 +1,16 @@
 import { Component, computed, effect, signal } from '@angular/core';
 import { MaterialModule } from '../../../material/material.module';
+import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
   selector: 'app-signals',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './signals.component.html',
   styleUrl: './signals.component.scss'
 })
 export class SignalsComponent {
+  title: string = 'Signals';
   // counter: number = 0;
   // message: string[] = [];
 

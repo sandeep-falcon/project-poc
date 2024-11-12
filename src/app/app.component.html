@@ -1,16 +1,10 @@
 <app-header [drawer]="drawer"></app-header>
 <mat-drawer-container class="sidenav-container" autosize>
-    <mat-drawer #drawer class="sidenav-drawer" [opened]="screenWidth() > 840" [mode]="screenWidth() > 840 ? 'side' : 'over'">
+    <mat-drawer #drawer class="sidenav-drawer" [opened]="screenWidth() > 840"
+        [mode]="screenWidth() > 840 ? 'side' : 'over'">
         <app-menu></app-menu>
     </mat-drawer>
-    <mat-toolbar-row>
-        <h5 class="m-0">RxJs Collection</h5>
-        <span class="spacer"></span>
-        <button mat-button class="text-dark" (click)="goToBack()">
-            Back <mat-icon>arrow_back</mat-icon>
-        </button>
-    </mat-toolbar-row>
-    <main class="container-fluid p-4">
+    <main class="container-fluid">
         <router-outlet></router-outlet>
     </main>
 </mat-drawer-container>

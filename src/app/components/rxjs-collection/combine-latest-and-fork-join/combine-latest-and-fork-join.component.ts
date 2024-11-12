@@ -2,15 +2,17 @@ import { Component, signal } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { MaterialModule } from '../../../material/material.module';
 import { Subscription } from 'rxjs';
+import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
   selector: 'app-combine-latest-and-fork-join',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './combine-latest-and-fork-join.component.html',
   styleUrl: './combine-latest-and-fork-join.component.scss',
 })
 export class CombineLatestAndForkJoinComponent {
+  title: string = 'CombineLatest and ForkJoin';
   combineLatestData = signal<string[]>([]);
   forkJoinData = signal<number[]>([]);
   combineSubs!: Subscription;

@@ -1,15 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { delay, from, of, Subscription, switchMap } from 'rxjs';
 import { MaterialModule } from '../../../material/material.module';
+import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
   selector: 'app-switchmap',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './switchmap.component.html',
   styleUrl: './switchmap.component.scss',
 })
 export class SwitchmapComponent {
+  title: string = 'SwitchMap';
   switchMapData = signal<number[]>([]);
   switchMapSub!: Subscription;
 

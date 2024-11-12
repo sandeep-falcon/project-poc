@@ -1,15 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { concatMap, delay, of, Subscription } from 'rxjs';
 import { MaterialModule } from '../../../material/material.module';
+import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
   selector: 'app-concatmap',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './concatmap.component.html',
   styleUrl: './concatmap.component.scss',
 })
 export class ConcatmapComponent {
+  title: string = 'ConcatMap';
   concatMapData = signal<number[]>([]);
   concatMapSub!: Subscription;
   sourceObservable = of(1, 2, 3, 4, 5);

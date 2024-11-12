@@ -1,22 +1,23 @@
 import { Component, signal } from '@angular/core';
 import { delay, exhaustMap, from, of, Subscription } from 'rxjs';
 import { MaterialModule } from '../../../material/material.module';
+import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
   selector: 'app-exhaustmap',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './exhaustmap.component.html',
   styleUrl: './exhaustmap.component.scss',
 })
 export class ExhaustmapComponent {
+  title: string = 'ExhaustMap';
   exhaustMapData = signal<number[]>([]);
   exhaustMapSub!: Subscription;
   sourceObservable = from([1, 2, 3, 4, 5]);
 
   $exhaustMap = this.sourceObservable.pipe(
     exhaustMap((value) => {
-      console.log('aa',value);
       return of(value).pipe(delay(1000));
     })
   );
