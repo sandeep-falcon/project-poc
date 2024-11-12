@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { MaterialModule } from '../../../material/material.module';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-combine-latest-and-fork-join',
@@ -10,21 +11,31 @@ import { MaterialModule } from '../../../material/material.module';
   styleUrl: './combine-latest-and-fork-join.component.scss',
 })
 export class CombineLatestAndForkJoinComponent {
-  combineLatestData: number[] = [];
-  forkJoinData: number[] = [];
-  constructor(private dataService: DataService) { }
+  combineLatestData = signal<string[]>([]);
+  forkJoinData = signal<number[]>([]);
+  combineSubs!: Subscription;
+  forkJoinSubs!: Subscription;
+  constructor(private dataService: DataService) {}
 
   getCombineLatest() {
     this.dataService.getCombineLatest().subscribe((res) => {
       console.log('CombineLatest values', res);
-      this.combineLatestData.push(...res);
+      this.combineLatestData.update((prevData: string[]) => [
+        ...prevData,
+        JSON.stringify(res),
+      ]);
     });
   }
 
   getForkJoin() {
     this.dataService.getForkJoin().subscribe((res) => {
       console.log('ForkJoin values', res);
-      this.forkJoinData.push(...res);
+      this.forkJoinData.update((prevData: number[]) => [...prevData, ...res]);
     });
+  }
+
+  ngOnDestroy() {
+    this.combineSubs?.unsubscribe();
+    this.forkJoinSubs?.unsubscribe();
   }
 }

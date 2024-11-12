@@ -30,19 +30,11 @@ export class DataService {
     return from([1, 2, 3, 4, 5]);
   }
 
-  // ! combine latest and Fork join
-
-  getData1() {
-    return of(1, 2, 3, 4, 5);
-  }
-  getData2() {
-    return from([6, 7, 8, 9, 10]);
-  }
-
+  observables = [of(1, 2, 3, 4, 5), from([10, 11, 12, 13, 14])];
   getCombineLatest() {
-    return combineLatest([this.getData1(), this.getData2()]);
+    return combineLatest(this.observables);
   }
   getForkJoin() {
-    return forkJoin([this.getData1(), this.getData2()]);
+    return forkJoin(this.observables);
   }
 }
