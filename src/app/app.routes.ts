@@ -6,6 +6,7 @@ import { SwitchmapComponent } from './components/rxjs-collection/switchmap/switc
 import { AngularCollectionComponent } from './components/angular-collection/angular-collection.component';
 import { SignalsComponent } from './components/angular-collection/signals/signals.component';
 import { MergemapComponent } from './components/rxjs-collection/mergemap/mergemap.component';
+import { ConcatmapComponent } from './components/rxjs-collection/concatmap/concatmap.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'mergemap',
     component: MergemapComponent,
+  },
+  {
+    path: 'concatmap',
+    component: ConcatmapComponent,
   },
   {
     path: 'angular',

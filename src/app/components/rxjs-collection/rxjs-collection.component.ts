@@ -32,5 +32,9 @@ export class RxjsCollectionComponent {
       label: 'MergeMap',
       route: '/mergemap',
     },
+    {
+      label: 'ConcatMap',
+      route: '/concatmap',
+    },
   ];
 }

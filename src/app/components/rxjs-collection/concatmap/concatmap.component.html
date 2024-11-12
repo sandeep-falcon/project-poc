@@ -1,0 +1,17 @@
+<h3>Concat Map</h3>
+<p>This operator maps each source value to an inner observable and concatenates the values from each inner observable
+    sequentially. It waits for each inner observable to complete before moving on to the next one. Use concatMap over
+    mergeMap when order is important for you.</p>
+<div class="">
+    <h3>When to Use</h3>
+    <p>You need to process values sequentially (making requests one by one).
+        The order of execution matters, and each value or request should finish before starting the next.
+        You're handling tasks that can't run in parallel (database operations with dependencies).
+    </p>
+</div>
+<button mat-raised-button (click)="getData()">start</button>
+<ul>
+    @for(item of concatMapData(); track $index ){
+    <li>{{ item }}</li>
+    }
+</ul>
