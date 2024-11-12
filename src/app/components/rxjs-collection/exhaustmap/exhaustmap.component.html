@@ -1,0 +1,17 @@
+<h3>exhaust Map</h3>
+<p>The exhaustMap operator works by mapping each source value to an observable, and then subscribing to that observable.
+    It ensures that only one inner observable is active at a time. If a new source value arrives while an inner
+    observable is still active, the new value is ignored until the inner observable completes.</p>
+<div class="">
+    <h3>When to Use</h3>
+    <p>You want to prevent concurrent tasks triggered by frequent events, such as button clicks or form submissions.
+        Only the first task is important until it completes; any intermediate events should be ignored.
+        You want to avoid accidentally triggering multiple actions, like multiple API calls on repeated clicks.
+    </p>
+</div>
+<button mat-raised-button (click)="getData()">start</button>
+<ul>
+    @for(item of exhaustMapData(); track $index ){
+    <li>{{ item }}</li>
+    }
+</ul>

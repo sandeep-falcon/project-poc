@@ -5,6 +5,9 @@ import { CombineLatestAndForkJoinComponent } from './components/rxjs-collection/
 import { SwitchmapComponent } from './components/rxjs-collection/switchmap/switchmap.component';
 import { AngularCollectionComponent } from './components/angular-collection/angular-collection.component';
 import { SignalsComponent } from './components/angular-collection/signals/signals.component';
+import { MergemapComponent } from './components/rxjs-collection/mergemap/mergemap.component';
+import { ConcatmapComponent } from './components/rxjs-collection/concatmap/concatmap.component';
+import { ExhaustmapComponent } from './components/rxjs-collection/exhaustmap/exhaustmap.component';
 
 export const routes: Routes = [
   {
@@ -29,12 +32,23 @@ export const routes: Routes = [
     component: SwitchmapComponent,
   },
   {
+    path: 'mergemap',
+    component: MergemapComponent,
+  },
+  {
+    path: 'concatmap',
+    component: ConcatmapComponent,
+  },
+  {
+    path: 'exhaustmap',
+    component: ExhaustmapComponent,
+  },
+  {
     path: 'angular',
-    component: AngularCollectionComponent
+    component: AngularCollectionComponent,
   },
   {
     path: 'signals',
-    component: SignalsComponent
-    ,
+    component: SignalsComponent,
   },
 ];

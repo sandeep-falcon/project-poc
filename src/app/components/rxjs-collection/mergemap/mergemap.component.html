@@ -1,0 +1,17 @@
+<h3>Merge Map</h3>
+<p>This operator maps each source value to an inner observable and merges the values from multiple inner observables
+    into a single observable. It does not cancel or unsubscribe from any inner observables.</p>
+<div class="">
+    <h3>When to Use</h3>
+    <p>You need to process multiple concurrent inner observables at the same time, without canceling any previous ones.
+        You don't mind receiving results in an interleaved order (the order of values from inner observables might be
+        mixed).
+        You have independent async tasks or requests that can run in parallel.
+    </p>
+</div>
+<button mat-raised-button (click)="getData()">start</button>
+<ul>
+    @for(item of mergeMapData(); track $index ){
+    <li>{{ item }}</li>
+    }
+</ul>
