@@ -13,13 +13,18 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class MenuComponent {
   list: MenuListInterface[] = [
     {
+      label: 'dashboard',
+      icon: 'dashboard',
+      route: '/dashboard',
+    },
+    {
       label: 'rxjs collection',
-      icon: 'home',
+      icon: 'local_library',
       route: '/rxjs',
     },
     {
       label: 'angular collection',
-      icon: 'home',
+      icon: 'local_library',
       route: '/angular',
     },
   ];
