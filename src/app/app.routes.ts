@@ -5,6 +5,7 @@ import { CombineLatestAndForkJoinComponent } from './components/rxjs-collection/
 import { SwitchmapComponent } from './components/rxjs-collection/switchmap/switchmap.component';
 import { AngularCollectionComponent } from './components/angular-collection/angular-collection.component';
 import { SignalsComponent } from './components/angular-collection/signals/signals.component';
+import { MergemapComponent } from './components/rxjs-collection/mergemap/mergemap.component';
 
 export const routes: Routes = [
   {
@@ -29,12 +30,15 @@ export const routes: Routes = [
     component: SwitchmapComponent,
   },
   {
+    path: 'mergemap',
+    component: MergemapComponent,
+  },
+  {
     path: 'angular',
-    component: AngularCollectionComponent
+    component: AngularCollectionComponent,
   },
   {
     path: 'signals',
-    component: SignalsComponent
-    ,
+    component: SignalsComponent,
   },
 ];

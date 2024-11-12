@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, signal } from '@angular/core';
 import { delay, from, of, Subscription, switchMap } from 'rxjs';
 import { MaterialModule } from '../../../material/material.module';

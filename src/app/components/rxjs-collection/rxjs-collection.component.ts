@@ -25,8 +25,12 @@ export class RxjsCollectionComponent {
       route: '/clfj',
     },
     {
-      label: 'Switch Map',
+      label: 'SwitchMap',
       route: '/switchmap',
+    },
+    {
+      label: 'MergeMap',
+      route: '/mergemap',
     },
   ];
 }
