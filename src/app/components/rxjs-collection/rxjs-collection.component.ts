@@ -12,10 +12,6 @@ import { CollectionInterface } from '../../interface/collection-interface';
 })
 export class RxjsCollectionComponent {
   rxJsCollection: CollectionInterface[] = [
-    // {
-    //   label: 'Observables',
-    //   route: '/observables',
-    // },
     {
       label: 'of and from',
       route: '/ofandfrom',
@@ -35,6 +31,10 @@ export class RxjsCollectionComponent {
     {
       label: 'ConcatMap',
       route: '/concatmap',
+    },
+    {
+      label: 'ExhaustMap',
+      route: '/exhaustmap',
     },
   ];
 }
