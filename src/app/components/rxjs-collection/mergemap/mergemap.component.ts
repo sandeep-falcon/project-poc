@@ -1,15 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { MaterialModule } from '../../../material/material.module';
 import { delay, mergeMap, of, Subscription } from 'rxjs';
+import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
   selector: 'app-mergemap',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, SubHeaderComponent],
   templateUrl: './mergemap.component.html',
   styleUrl: './mergemap.component.scss',
 })
 export class MergemapComponent {
+  title = 'mergeMap';
   mergeMapData = signal<number[]>([]);
   mergeMapSub!: Subscription;
   sourceObservable = of(1, 2, 3, 4, 5);
