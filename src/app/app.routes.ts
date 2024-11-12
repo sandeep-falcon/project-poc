@@ -18,37 +18,48 @@ export const routes: Routes = [
   {
     path: 'rxjs',
     component: RxjsCollectionComponent,
+    title: 'RxJS Collection',
   },
   {
-    path: 'ofandfrom',
-    component: OfandfromComponent,
-  },
-  {
-    path: 'clfj',
-    component: CombineLatestAndForkJoinComponent,
-  },
-  {
-    path: 'switchmap',
-    component: SwitchmapComponent,
-  },
-  {
-    path: 'mergemap',
-    component: MergemapComponent,
-  },
-  {
-    path: 'concatmap',
-    component: ConcatmapComponent,
-  },
-  {
-    path: 'exhaustmap',
-    component: ExhaustmapComponent,
+    path: 'rxjs',
+    children: [
+      {
+        path: 'ofandfrom',
+        component: OfandfromComponent,
+      },
+      {
+        path: 'clfj',
+        component: CombineLatestAndForkJoinComponent,
+      },
+      {
+        path: 'switchmap',
+        component: SwitchmapComponent,
+      },
+      {
+        path: 'mergemap',
+        component: MergemapComponent,
+      },
+      {
+        path: 'concatmap',
+        component: ConcatmapComponent,
+      },
+      {
+        path: 'exhaustmap',
+        component: ExhaustmapComponent,
+      },
+    ],
   },
   {
     path: 'angular',
     component: AngularCollectionComponent,
   },
   {
-    path: 'signals',
-    component: SignalsComponent,
+    path: 'angular',
+    children: [
+      {
+        path: 'signals',
+        component: SignalsComponent,
+      },
+    ],
   },
 ];

@@ -14,7 +14,7 @@ export class AngularCollectionComponent {
   collection: CollectionInterface[] = [
     {
       label: 'Signals',
-      route: '/signals',
+      route: 'signals',
     },
   ];
 }
