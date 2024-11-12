@@ -8,47 +8,76 @@ import { SignalsComponent } from './components/angular-collection/signals/signal
 import { MergemapComponent } from './components/rxjs-collection/mergemap/mergemap.component';
 import { ConcatmapComponent } from './components/rxjs-collection/concatmap/concatmap.component';
 import { ExhaustmapComponent } from './components/rxjs-collection/exhaustmap/exhaustmap.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/rxjs',
+    redirectTo: '/dashboard',
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    title: 'Dashboard',
   },
   {
     path: 'rxjs',
     component: RxjsCollectionComponent,
+    title: 'RxJS Collection',
   },
   {
-    path: 'ofandfrom',
-    component: OfandfromComponent,
-  },
-  {
-    path: 'clfj',
-    component: CombineLatestAndForkJoinComponent,
-  },
-  {
-    path: 'switchmap',
-    component: SwitchmapComponent,
-  },
-  {
-    path: 'mergemap',
-    component: MergemapComponent,
-  },
-  {
-    path: 'concatmap',
-    component: ConcatmapComponent,
-  },
-  {
-    path: 'exhaustmap',
-    component: ExhaustmapComponent,
+    path: 'rxjs',
+    children: [
+      {
+        path: 'ofandfrom',
+        component: OfandfromComponent,
+        title: 'of and from - RxJs',
+      },
+      {
+        path: 'clfj',
+        component: CombineLatestAndForkJoinComponent,
+        title: 'combineLatest and forkJoin - RxJs',
+      },
+      {
+        path: 'switchmap',
+        component: SwitchmapComponent,
+        title: 'switchMap - RxJs',
+      },
+      {
+        path: 'mergemap',
+        component: MergemapComponent,
+        title: 'mergeMap - RxJs',
+      },
+      {
+        path: 'concatmap',
+        component: ConcatmapComponent,
+        title: 'concatMap - RxJs',
+      },
+      {
+        path: 'exhaustmap',
+        component: ExhaustmapComponent,
+        title: 'exhaustMap - RxJs',
+      },
+    ],
   },
   {
     path: 'angular',
     component: AngularCollectionComponent,
+    title: 'Angular Collection',
   },
   {
-    path: 'signals',
-    component: SignalsComponent,
+    path: 'angular',
+    children: [
+      {
+        path: 'signals',
+        component: SignalsComponent,
+        title: 'Signals - Angular',
+      },
+    ],
+  },
+  {
+    path: '**',
+    redirectTo: '/dashboard',
   },
 ];

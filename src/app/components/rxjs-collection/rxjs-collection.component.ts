@@ -14,27 +14,27 @@ export class RxjsCollectionComponent {
   rxJsCollection: CollectionInterface[] = [
     {
       label: 'of and from',
-      route: '/ofandfrom',
+      route: 'ofandfrom',
     },
     {
       label: 'CombineLatest and forkJoin',
-      route: '/clfj',
+      route: 'clfj',
     },
     {
       label: 'SwitchMap',
-      route: '/switchmap',
+      route: 'switchmap',
     },
     {
       label: 'MergeMap',
-      route: '/mergemap',
+      route: 'mergemap',
     },
     {
       label: 'ConcatMap',
-      route: '/concatmap',
+      route: 'concatmap',
     },
     {
       label: 'ExhaustMap',
-      route: '/exhaustmap',
+      route: 'exhaustmap',
     },
   ];
 }

@@ -11,10 +11,10 @@ import { MatRippleModule } from '@angular/material/core';
   styleUrl: './angular-collection.component.scss'
 })
 export class AngularCollectionComponent {
-  collection: CollectionInterface[] = [
+  angularCollection: CollectionInterface[] = [
     {
       label: 'Signals',
-      route: '/signals',
+      route: 'signals',
     },
   ];
 }

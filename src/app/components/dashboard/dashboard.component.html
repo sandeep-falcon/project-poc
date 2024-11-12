@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        @for(item of angularCollection; track item.label){
+        @for(item of collections; track item.label){
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card border-0 shadow-sm" matRipple [routerLink]="item.route">
                 <div class="card-body text-center text-capitalize">
