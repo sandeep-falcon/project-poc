@@ -1,30 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { DataService } from '../../../services/data.service';
+import { MaterialModule } from '../../../material/material.module';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-ofandfrom',
   standalone: true,
-  imports: [],
+  imports: [MaterialModule],
   templateUrl: './ofandfrom.component.html',
   styleUrl: './ofandfrom.component.scss',
 })
 export class OfandfromComponent {
   constructor(private dataService: DataService) {}
 
-  dataOF: number[] = [];
-  dataFROM: number[] = [];
+  dataOF = signal<number[]>([]);
+  dataFROM = signal<number[]>([]);
+  OfSubs!: Subscription;
+  FROMSubs!: Subscription;
 
   getDataWithOF() {
     this.dataService.getDataWithOF().subscribe((res: number) => {
-      console.log('res data', res);
-      this.dataOF.push(res);
+      console.log('getDataWithOF', res);
+      this.dataOF.update((prevData: number[]) => [...prevData, res]);
     });
   }
 
   getDataWithFrom() {
     this.dataService.getDataWithFROM().subscribe((res: number) => {
-      console.log('res data', res);
-      this.dataFROM.push(res);
+      console.log('getDataWithFROM', res);
+      this.dataFROM.update((prevData: number[]) => [...prevData, res]);
     });
+  }
+
+  ngOnDestroy() {
+    this.OfSubs?.unsubscribe();
+    this.FROMSubs?.unsubscribe();
   }
 }

@@ -1,19 +1,37 @@
 <div class="row">
     <div class="col-md-6">
-        <p>OF</p>
-        <button (click)="getDataWithOF()">Start OF</button>
+        <h3>OF</h3>
+        <p>The of function creates an observable that emits the values you pass into it as separate emissions and
+            completes after emitting all of them. It's like saying, “Give me an observable that just emits these
+            values.</p>
+        <h3>When to Use of</h3>
+        <p>Use of when you have individual values or objects and want to turn them into a single observable. This is
+            useful for static values, simple sequences, or testing.</p>
 
-        @for(item of dataOF; track $index){
-        {{item}}
-        }
+        <button mat-raised-button (click)="getDataWithOF()">Start 'OF'</button>
+
+        <ul>
+            @for(item of dataOF(); track $index){
+            <li>{{item}}</li>
+            }
+        </ul>
     </div>
 
     <div class="col-md-6">
-        <p>From</p>
-        <button (click)="getDataWithFrom()">Start FROM</button>
+        <h3>From</h3>
+        <p>The from function takes an array, iterable, promise, or any observable-like object and converts it into an
+            observable that emits each item in the sequence or the resolved value in the case of promises.</p>
+        <h3>When to Use from</h3>
+        <p>Use from when you want to turn a collection (array) or a promise into an observable. This is common
+            when you have data from APIs (promises) or multiple items in a collection.
+        </p>
+        <button mat-raised-button (click)="getDataWithFrom()">Start 'FROM'</button>
 
-        @for(item of dataFROM; track $index){
-        {{item}}
-        }
+        <ul>
+            @for(item of dataFROM(); track $index){
+            <li>{{item}}</li>
+            }
+        </ul>
+
     </div>
 </div>
