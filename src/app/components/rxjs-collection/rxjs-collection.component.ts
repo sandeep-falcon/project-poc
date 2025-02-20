@@ -5,11 +5,10 @@ import { CollectionInterface } from '../../interface/collection-interface';
 import { SubHeaderComponent } from '../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-rxjs-collection',
-  standalone: true,
-  imports: [MatRippleModule, RouterLink, SubHeaderComponent],
-  templateUrl: './rxjs-collection.component.html',
-  styleUrl: './rxjs-collection.component.scss',
+    selector: 'app-rxjs-collection',
+    imports: [MatRippleModule, RouterLink, SubHeaderComponent],
+    templateUrl: './rxjs-collection.component.html',
+    styleUrl: './rxjs-collection.component.scss'
 })
 export class RxjsCollectionComponent {
   title: string = 'RxJS Collection';

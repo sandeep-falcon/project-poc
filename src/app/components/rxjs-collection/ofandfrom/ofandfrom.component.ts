@@ -5,11 +5,10 @@ import { Subscription } from 'rxjs';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-ofandfrom',
-  standalone: true,
-  imports: [MaterialModule, SubHeaderComponent],
-  templateUrl: './ofandfrom.component.html',
-  styleUrl: './ofandfrom.component.scss',
+    selector: 'app-ofandfrom',
+    imports: [MaterialModule, SubHeaderComponent],
+    templateUrl: './ofandfrom.component.html',
+    styleUrl: './ofandfrom.component.scss'
 })
 export class OfandfromComponent {
   title: string = 'Of and From';

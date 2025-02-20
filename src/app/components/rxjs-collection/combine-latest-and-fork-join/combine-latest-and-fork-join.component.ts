@@ -5,11 +5,10 @@ import { Subscription } from 'rxjs';
 import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
-  selector: 'app-combine-latest-and-fork-join',
-  standalone: true,
-  imports: [MaterialModule, SubHeaderComponent],
-  templateUrl: './combine-latest-and-fork-join.component.html',
-  styleUrl: './combine-latest-and-fork-join.component.scss',
+    selector: 'app-combine-latest-and-fork-join',
+    imports: [MaterialModule, SubHeaderComponent],
+    templateUrl: './combine-latest-and-fork-join.component.html',
+    styleUrl: './combine-latest-and-fork-join.component.scss'
 })
 export class CombineLatestAndForkJoinComponent {
   title: string = 'CombineLatest and ForkJoin';

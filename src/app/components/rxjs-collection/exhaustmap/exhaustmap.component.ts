@@ -4,11 +4,10 @@ import { MaterialModule } from '../../../material/material.module';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-exhaustmap',
-  standalone: true,
-  imports: [MaterialModule, SubHeaderComponent],
-  templateUrl: './exhaustmap.component.html',
-  styleUrl: './exhaustmap.component.scss',
+    selector: 'app-exhaustmap',
+    imports: [MaterialModule, SubHeaderComponent],
+    templateUrl: './exhaustmap.component.html',
+    styleUrl: './exhaustmap.component.scss'
 })
 export class ExhaustmapComponent {
   title: string = 'ExhaustMap';

@@ -4,11 +4,10 @@ import { MaterialModule } from '../../../material/material.module';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-switchmap',
-  standalone: true,
-  imports: [MaterialModule, SubHeaderComponent],
-  templateUrl: './switchmap.component.html',
-  styleUrl: './switchmap.component.scss',
+    selector: 'app-switchmap',
+    imports: [MaterialModule, SubHeaderComponent],
+    templateUrl: './switchmap.component.html',
+    styleUrl: './switchmap.component.scss'
 })
 export class SwitchmapComponent {
   title: string = 'SwitchMap';
