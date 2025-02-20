@@ -4,11 +4,10 @@ import { RouterLink } from '@angular/router';
 import { SubHeaderComponent } from '../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [RouterLink, SubHeaderComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+    selector: 'app-dashboard',
+    imports: [RouterLink, SubHeaderComponent],
+    templateUrl: './dashboard.component.html',
+    styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
   title: string = 'Dashboard';

@@ -4,11 +4,10 @@ import { delay, mergeMap, of, Subscription } from 'rxjs';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-mergemap',
-  standalone: true,
-  imports: [MaterialModule, SubHeaderComponent],
-  templateUrl: './mergemap.component.html',
-  styleUrl: './mergemap.component.scss',
+    selector: 'app-mergemap',
+    imports: [MaterialModule, SubHeaderComponent],
+    templateUrl: './mergemap.component.html',
+    styleUrl: './mergemap.component.scss'
 })
 export class MergemapComponent {
   title = 'mergeMap';

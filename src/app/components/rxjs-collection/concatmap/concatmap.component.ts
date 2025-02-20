@@ -4,11 +4,10 @@ import { MaterialModule } from '../../../material/material.module';
 import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
-  selector: 'app-concatmap',
-  standalone: true,
-  imports: [MaterialModule, SubHeaderComponent],
-  templateUrl: './concatmap.component.html',
-  styleUrl: './concatmap.component.scss',
+    selector: 'app-concatmap',
+    imports: [MaterialModule, SubHeaderComponent],
+    templateUrl: './concatmap.component.html',
+    styleUrl: './concatmap.component.scss'
 })
 export class ConcatmapComponent {
   title: string = 'ConcatMap';

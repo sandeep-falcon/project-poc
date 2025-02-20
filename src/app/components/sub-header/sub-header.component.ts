@@ -3,11 +3,10 @@ import { MaterialModule } from '../../material/material.module';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-sub-header',
-  standalone: true,
-  imports: [MaterialModule],
-  templateUrl: './sub-header.component.html',
-  styleUrl: './sub-header.component.scss',
+    selector: 'app-sub-header',
+    imports: [MaterialModule],
+    templateUrl: './sub-header.component.html',
+    styleUrl: './sub-header.component.scss'
 })
 export class SubHeaderComponent {
   @Input() title!: string;

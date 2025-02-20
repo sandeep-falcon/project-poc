@@ -5,11 +5,10 @@ import { MatRippleModule } from '@angular/material/core';
 import { SubHeaderComponent } from '../sub-header/sub-header.component';
 
 @Component({
-  selector: 'app-angular-collection',
-  standalone: true,
-  imports: [RouterLink, MatRippleModule, SubHeaderComponent],
-  templateUrl: './angular-collection.component.html',
-  styleUrl: './angular-collection.component.scss',
+    selector: 'app-angular-collection',
+    imports: [RouterLink, MatRippleModule, SubHeaderComponent],
+    templateUrl: './angular-collection.component.html',
+    styleUrl: './angular-collection.component.scss'
 })
 export class AngularCollectionComponent {
   title: string = 'Angular Collection';
