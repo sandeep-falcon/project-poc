@@ -1,6 +1,6 @@
 import {
   ApplicationConfig,
-  provideExperimentalZonelessChangeDetection,
+  provideZonelessChangeDetection,
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
     // provideClientHydration(),
     provideAnimationsAsync(),
     // provideZoneChangeDetection({ eventCoalescing: true }),
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
     provideHttpClient()
   ],
 };
