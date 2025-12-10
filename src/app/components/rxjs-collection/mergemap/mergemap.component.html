@@ -13,7 +13,7 @@
             You have independent async tasks or requests that can run in parallel.
         </p>
     </div>
-    <button mat-raised-button (click)="getData()">start</button>
+    <p-button label="start" (click)="getData()"></p-button>
     <ul>
         @for(item of mergeMapData(); track $index ){
         <li>{{ item }}</li>

@@ -1,11 +1,1 @@
-<mat-list>
-    @for(item of list; track item.label){
-    <mat-list-item matRipple [routerLink]="item.route" routerLinkActive="activeRoute">
-        <div class="d-flex">
-            <span class="text-capitalize">{{item.label}}</span>
-            <span class="spacer"></span>
-            <mat-icon>{{item.icon}}</mat-icon>
-        </div>
-    </mat-list-item>
-    }
-</mat-list>
+<p-menu [model]="items" class="w-100"></p-menu>

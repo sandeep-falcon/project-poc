@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CollectionInterface } from '../../interface/collection-interface';
 import { RouterLink } from '@angular/router';
-import { MatRippleModule } from '@angular/material/core';
+
 import { SubHeaderComponent } from '../sub-header/sub-header.component';
 
 @Component({
     selector: 'app-angular-collection',
-    imports: [RouterLink, MatRippleModule, SubHeaderComponent],
+    imports: [RouterLink, SubHeaderComponent],
     templateUrl: './angular-collection.component.html',
     styleUrl: './angular-collection.component.scss'
 })

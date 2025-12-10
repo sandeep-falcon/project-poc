@@ -10,7 +10,7 @@
             or You want to cancel previous requests or tasks in favor of the latest one.
         </p>
     </div>
-    <button mat-raised-button (click)="getData()">start</button>
+    <p-button label="start" (click)="getData()"></p-button>
     <ul>
         @for(item of switchMapData(); track $index ){
         <li>{{ item }}</li>

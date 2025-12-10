@@ -14,11 +14,3 @@ body {
     flex: 1 1 auto;
 }
 
-[matRipple] {
-    cursor: pointer;
-    user-select: none;
-
-    &:hover {
-        background-color: #ccc;
-    }
-}

@@ -10,7 +10,7 @@
             <p>Use of when you have individual values or objects and want to turn them into a single observable. This is
                 useful for static values, simple sequences, or testing.</p>
 
-            <button mat-raised-button (click)="getDataWithOF()">Start 'OF'</button>
+            <p-button label="Start 'OF'" (click)="getDataWithOF()"></p-button>
 
             <ul>
                 @for(item of dataOF(); track $index){
@@ -28,7 +28,7 @@
             <p>Use from when you want to turn a collection (array) or a promise into an observable. This is common
                 when you have data from APIs (promises) or multiple items in a collection.
             </p>
-            <button mat-raised-button (click)="getDataWithFrom()">Start 'FROM'</button>
+            <p-button label="Start 'FROM'" (click)="getDataWithFrom()"></p-button>
 
             <ul>
                 @for(item of dataFROM(); track $index){

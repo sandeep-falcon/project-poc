@@ -18,9 +18,9 @@
     <div class="row">
         <div class="col-12">
             <div class="d-flex justify-content-center align-items-center">
-                <button mat-raised-button (click)="decrement()">-</button>
+                <p-button label="-" (click)="decrement()"></p-button>
                 <span class="p-3">{{ counterValue() }}</span>
-                <button mat-raised-button (click)="increment()">+</button>
+                <p-button label="+" (click)="increment()"></p-button>
             </div>
         </div>
         <div class="col-12">

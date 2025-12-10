@@ -13,7 +13,7 @@
                 <p>Use combineLatest when you want to continuously get the latest values from each observable
                     whenever any one of them updates.</p>
             </div>
-            <button mat-raised-button (click)="getCombineLatest()">start</button>
+            <p-button label="start" (click)="getCombineLatest()"></p-button>
             <ul>
                 @for(item of combineLatestData(); track $index){
                 <li>{{item}}</li>
@@ -34,7 +34,7 @@
                     each
                     observable at once.</p>
             </div>
-            <button mat-raised-button (click)="getForkJoin()">start</button>
+            <p-button label="start" (click)="getForkJoin()"></p-button>
             <ul>
                 @for(item of forkJoinData(); track $index){
                 <li>{{item}}</li>

@@ -13,7 +13,7 @@
             You're handling tasks that can't run in parallel (database operations with dependencies).
         </p>
     </div>
-    <button mat-raised-button (click)="getData()">start</button>
+    <p-button label="start" (click)="getData()"></p-button>
     <ul>
         @for(item of concatMapData(); track $index ){
         <li>{{ item }}</li>

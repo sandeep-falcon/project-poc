@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-sub-header',
-    imports: [MatToolbarModule, MatButtonModule, MatIconModule],
+    imports: [ToolbarModule, ButtonModule],
   templateUrl: './sub-header.component.html',
   styleUrl: './sub-header.component.scss'
 })
