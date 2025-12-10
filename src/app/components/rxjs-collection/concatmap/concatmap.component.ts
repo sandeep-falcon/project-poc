@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { concatMap, delay, of, Subscription } from 'rxjs';
-import { MaterialModule } from '../../../material/material.module';
+import { MatButtonModule } from '@angular/material/button';
 import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
     selector: 'app-concatmap',
-    imports: [MaterialModule, SubHeaderComponent],
+    imports: [MatButtonModule, SubHeaderComponent],
     templateUrl: './concatmap.component.html',
     styleUrl: './concatmap.component.scss'
 })

@@ -1,14 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
-    selector: 'app-root',
-    imports: [RouterOutlet, MaterialModule, HeaderComponent, MenuComponent],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [RouterOutlet, HeaderComponent, MenuComponent, MatSidenavModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   screenWidth = signal(window.innerWidth);
