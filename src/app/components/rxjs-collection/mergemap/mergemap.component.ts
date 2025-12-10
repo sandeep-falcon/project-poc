@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { ButtonModule } from 'primeng/button';
 import { delay, mergeMap, of, Subscription } from 'rxjs';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
     selector: 'app-mergemap',
-    imports: [MatButtonModule, SubHeaderComponent],
+    imports: [ButtonModule, SubHeaderComponent],
     templateUrl: './mergemap.component.html',
     styleUrl: './mergemap.component.scss'
 })

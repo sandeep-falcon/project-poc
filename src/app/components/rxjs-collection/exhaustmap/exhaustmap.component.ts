@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { delay, exhaustMap, from, of, Subscription } from 'rxjs';
-import { MatButtonModule } from '@angular/material/button';
+import { ButtonModule } from 'primeng/button';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
     selector: 'app-exhaustmap',
-    imports: [MatButtonModule, SubHeaderComponent],
+    imports: [ButtonModule, SubHeaderComponent],
     templateUrl: './exhaustmap.component.html',
     styleUrl: './exhaustmap.component.scss'
 })

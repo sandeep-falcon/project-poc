@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { MatButtonModule } from '@angular/material/button';
+import { ButtonModule } from 'primeng/button';
 import { Subscription } from 'rxjs';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
     selector: 'app-ofandfrom',
-    imports: [MatButtonModule, SubHeaderComponent],
+    imports: [ButtonModule, SubHeaderComponent],
     templateUrl: './ofandfrom.component.html',
     styleUrl: './ofandfrom.component.scss'
 })

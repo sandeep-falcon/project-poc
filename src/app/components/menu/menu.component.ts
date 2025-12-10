@@ -1,31 +1,36 @@
-import { Component } from '@angular/core';
-import { MenuListInterface } from '../../interface/menu-list-interface';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, OnInit } from '@angular/core';
+import { MenuModule } from 'primeng/menu';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-menu',
-  imports: [RouterLink, RouterLinkActive, MatListModule, MatIconModule],
+  imports: [MenuModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
-export class MenuComponent {
-  list: MenuListInterface[] = [
-    {
-      label: 'dashboard',
-      icon: 'dashboard',
-      route: '/dashboard',
-    },
-    {
-      label: 'rxjs collection',
-      icon: 'local_library',
-      route: '/rxjs',
-    },
-    {
-      label: 'angular collection',
-      icon: 'local_library',
-      route: '/angular',
-    },
-  ];
+export class MenuComponent implements OnInit {
+  items: MenuItem[] | undefined;
+
+  ngOnInit() {
+    this.items = [
+      {
+        label: 'Dashboard',
+        icon: 'pi pi-objects-column',
+        routerLink: '/dashboard',
+        styleClass: 'text-capitalize'
+      },
+      {
+        label: 'RxJS Collection',
+        icon: 'pi pi-book',
+        routerLink: '/rxjs',
+        styleClass: 'text-capitalize'
+      },
+      {
+        label: 'Angular Collection',
+        icon: 'pi pi-book',
+        routerLink: '/angular',
+        styleClass: 'text-capitalize'
+      },
+    ];
+  }
 }

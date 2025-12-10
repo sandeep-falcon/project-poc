@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { delay, from, of, Subscription, switchMap } from 'rxjs';
-import { MatButtonModule } from '@angular/material/button';
+import { ButtonModule } from 'primeng/button';
 import { SubHeaderComponent } from '../../sub-header/sub-header.component';
 
 @Component({
     selector: 'app-switchmap',
-    imports: [MatButtonModule, SubHeaderComponent],
+    imports: [ButtonModule, SubHeaderComponent],
     templateUrl: './switchmap.component.html',
     styleUrl: './switchmap.component.scss'
 })

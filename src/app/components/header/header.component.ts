@@ -1,16 +1,26 @@
-import { Component, Input } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { MenuModule } from 'primeng/menu';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
-    imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule],
+    imports: [ToolbarModule, ButtonModule, MenuModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   title = 'project poc';
-  @Input() drawer: any;
+  @Output() toggleSidebar = new EventEmitter<void>();
+  items: MenuItem[] | undefined;
+
+  ngOnInit() {
+      this.items = [
+          {
+              label: 'About',
+              icon: 'pi pi-info-circle'
+          }
+      ];
+  }
 }

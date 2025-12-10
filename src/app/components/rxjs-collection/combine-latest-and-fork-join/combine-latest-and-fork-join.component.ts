@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { MatButtonModule } from '@angular/material/button';
+import { ButtonModule } from 'primeng/button';
 import { Subscription } from 'rxjs';
 import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
     selector: 'app-combine-latest-and-fork-join',
-    imports: [MatButtonModule, SubHeaderComponent],
+    imports: [ButtonModule, SubHeaderComponent],
     templateUrl: './combine-latest-and-fork-join.component.html',
     styleUrl: './combine-latest-and-fork-join.component.scss'
 })

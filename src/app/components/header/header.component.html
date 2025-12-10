@@ -1,19 +1,11 @@
-<mat-toolbar class="border-bottom">
-    <button mat-icon-button (click)="drawer.toggle()" class="example-icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-
-    <span class="spacer"></span>
-    <span class="text-uppercase fw-bold">{{title}}</span>
-    <span class="spacer"></span>
-
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-            <mat-icon>info</mat-icon>
-            <span>About</span>
-        </button>
-    </mat-menu>
-</mat-toolbar>
+<p-toolbar class="border-bottom p-0">
+    <div class="p-toolbar-group-start">
+        <p-button icon="pi pi-bars" [text]="true" (click)="toggleSidebar.emit()" class="mr-2"></p-button>
+        <span class="text-uppercase fw-bold">{{title}}</span>
+    </div>
+    
+    <div class="p-toolbar-group-end">
+        <p-button icon="pi pi-ellipsis-v" [text]="true" (click)="menu.toggle($event)"></p-button>
+        <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    </div>
+</p-toolbar>

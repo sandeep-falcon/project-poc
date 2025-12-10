@@ -1,10 +1,16 @@
-<app-header [drawer]="drawer"></app-header>
-<mat-drawer-container class="sidenav-container" autosize>
-    <mat-drawer #drawer class="sidenav-drawer" [opened]="screenWidth() > 840"
-        [mode]="screenWidth() > 840 ? 'side' : 'over'">
+<app-header (toggleSidebar)="toggleSidebar()"></app-header>
+<div class="d-flex" style="min-height: calc(100vh - 64px);"> <!-- Adjust height based on toolbar height -->
+    @if (screenWidth() > 840) {
+        <div class="border-end bg-light" style="width: 250px; flex-shrink: 0;">
+             <app-menu></app-menu>
+        </div>
+    }
+
+    <p-drawer [(visible)]="sidebarVisible" *ngIf="screenWidth() <= 840">
         <app-menu></app-menu>
-    </mat-drawer>
-    <main class="container-fluid">
+    </p-drawer>
+
+    <main class="container-fluid p-3 flex-grow-1">
         <router-outlet></router-outlet>
     </main>
-</mat-drawer-container>
+</div>

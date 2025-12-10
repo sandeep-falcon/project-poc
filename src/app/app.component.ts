@@ -2,16 +2,22 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { DrawerModule } from 'primeng/drawer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, MenuComponent, MatSidenavModule],
+  imports: [RouterOutlet, HeaderComponent, MenuComponent, DrawerModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   screenWidth = signal(window.innerWidth);
+  sidebarVisible = false;
+
+  toggleSidebar() {
+      this.sidebarVisible = !this.sidebarVisible;
+  }
+
 
   constructor() {
     this.calculateWidthOnScreenResize();

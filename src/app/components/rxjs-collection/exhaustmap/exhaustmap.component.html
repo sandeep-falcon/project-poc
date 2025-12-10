@@ -12,7 +12,7 @@
             You want to avoid accidentally triggering multiple actions, like multiple API calls on repeated clicks.
         </p>
     </div>
-    <button mat-raised-button (click)="getData()">start</button>
+    <p-button label="start" (click)="getData()"></p-button>
     <ul>
         @for(item of exhaustMapData(); track $index ){
         <li>{{ item }}</li>

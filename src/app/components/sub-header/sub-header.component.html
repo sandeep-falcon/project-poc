@@ -1,7 +1,4 @@
-<mat-toolbar-row class="mb-3">
+<div class="d-flex align-items-center justify-content-between mb-3 p-2 border-bottom">
     <h4 class="m-0 text-capitalize">{{title}}</h4>
-    <span class="spacer"></span>
-    <button mat-button class="text-dark" (click)="goToBack()">
-        Back <mat-icon>arrow_back</mat-icon>
-    </button>
-</mat-toolbar-row>
+    <p-button label="Back" icon="pi pi-arrow-left" [link]="true" (click)="goToBack()" styleClass="p-0 text-decoration-none"></p-button>
+</div>
