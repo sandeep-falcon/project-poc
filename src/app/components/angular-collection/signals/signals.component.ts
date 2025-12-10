@@ -1,10 +1,10 @@
 import { Component, computed, effect, signal } from '@angular/core';
-import { MaterialModule } from '../../../material/material.module';
+import { MatButtonModule } from '@angular/material/button';
 import { SubHeaderComponent } from "../../sub-header/sub-header.component";
 
 @Component({
     selector: 'app-signals',
-    imports: [MaterialModule, SubHeaderComponent],
+    imports: [MatButtonModule, SubHeaderComponent],
     templateUrl: './signals.component.html',
     styleUrl: './signals.component.scss'
 })

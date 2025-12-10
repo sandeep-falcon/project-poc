@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { MaterialModule } from '../../material/material.module';
 import { MenuListInterface } from '../../interface/menu-list-interface';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-    selector: 'app-menu',
-    imports: [MaterialModule, RouterLink, RouterLinkActive],
-    templateUrl: './menu.component.html',
-    styleUrl: './menu.component.scss'
+  selector: 'app-menu',
+  imports: [RouterLink, RouterLinkActive, MatListModule, MatIconModule],
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
   list: MenuListInterface[] = [
