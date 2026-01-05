@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { RxjsCollectionComponent } from './components/rxjs-collection/rxjs-collection.component';
-import { OfandfromComponent } from './components/rxjs-collection/ofandfrom/ofandfrom.component';
-import { CombineLatestAndForkJoinComponent } from './components/rxjs-collection/combine-latest-and-fork-join/combine-latest-and-fork-join.component';
-import { SwitchmapComponent } from './components/rxjs-collection/switchmap/switchmap.component';
-import { AngularCollectionComponent } from './components/angular-collection/angular-collection.component';
-import { SignalsComponent } from './components/angular-collection/signals/signals.component';
-import { MergemapComponent } from './components/rxjs-collection/mergemap/mergemap.component';
-import { ConcatmapComponent } from './components/rxjs-collection/concatmap/concatmap.component';
-import { ExhaustmapComponent } from './components/rxjs-collection/exhaustmap/exhaustmap.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RxjsCollectionComponent } from './components/rxjs-collection/rxjs-collection';
+import { OfandfromComponent } from './components/rxjs-collection/ofandfrom/ofandfrom';
+import { CombineLatestAndForkJoinComponent } from './components/rxjs-collection/combine-latest-and-fork-join/combine-latest-and-fork-join';
+import { SwitchmapComponent } from './components/rxjs-collection/switchmap/switchmap';
+import { AngularCollectionComponent } from './components/angular-collection/angular-collection';
+import { SignalsComponent } from './components/angular-collection/signals/signals';
+import { MergemapComponent } from './components/rxjs-collection/mergemap/mergemap';
+import { ConcatmapComponent } from './components/rxjs-collection/concatmap/concatmap';
+import { ExhaustmapComponent } from './components/rxjs-collection/exhaustmap/exhaustmap';
+import { DashboardComponent } from './components/dashboard/dashboard';
 
 export const routes: Routes = [
   {
